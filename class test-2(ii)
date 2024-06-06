@@ -1,0 +1,26 @@
+//concatenate two strings
+#include <iostream>
+#include <cstring>
+using namespace std;
+string concat(string str1, string str2) {
+    return str1 + str2;
+}
+char* concat(const char* arr1, const char* arr2) {
+    int len1 = strlen(arr1);
+    int len2 = strlen(arr2);
+    int totalLen = len1 + len2;
+    char* result = new char[totalLen + 1]; 
+    strcpy(result, arr1);
+    strcat(result, arr2);
+    return result;
+}
+int main() {
+    string strConcat;
+    char* arrConcat;
+    strConcat = concat("Hello, ", "world!");
+    cout << "Concatenated string: " << strConcat << endl;
+    arrConcat = concat("Hello, ", "world!");
+    cout << "Concatenated character array: " << arrConcat << endl;
+    delete[] arrConcat;
+    return 0;
+}
