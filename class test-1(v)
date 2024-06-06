@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    int limit, sum = 0, i = 1;
+    std::cout << "Enter the limit: ";
+    std::cin >> limit;
+    while (i <= limit) {
+        sum += i;
+        i++;
+    }
+    std::cout << "The sum of natural numbers up to " << limit << " is: " << sum << std::endl;
+    return 0;
+}
